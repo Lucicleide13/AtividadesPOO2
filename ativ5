@@ -1,0 +1,63 @@
+package atividade1;
+
+public class Buraco {
+	private int raio;
+	public buraco (int raio){
+		this.raio = raio;
+		
+	}
+
+ public int setraio(){
+	 
+	 return this.raio;
+ }
+
+ public boolean verticalTamanho(Cilindro c){
+	 return c.getraio ()<= this.raio ? true: false;
+ }
+}
+
+
+
+package atividade1;
+
+public class Cilindro {
+private int raio;
+public Cilindro (int raio){
+	this.raio = raio;
+}
+public int getraio(){
+	return this.raio;
+	
+}
+
+
+}
+package atividade1;
+
+public class Cubo {
+	private int lado;
+	public Cubo (int lado){
+		this.lado = lado;
+	}
+ public int getLado(){
+	 return this.lado;
+ }
+}
+
+package atividade1;
+
+
+	public class CuboAdapter extends Cilindro{
+		private Cubo cubo;
+		public CuboAdapter(Cubo cubo){
+			this.cubo = cubo;
+		}
+		
+		public int getRaio(){
+			return (int) (this.cubo.getLado()*Math.sqrt (2)/2);
+		}
+	}
+
+
+
